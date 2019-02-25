@@ -1,4 +1,4 @@
-package hello;
-
-public class hello   {
-}
+//package hello;
+//
+//public class hello   {
+//}

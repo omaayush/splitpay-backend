@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89d0da4d-3e17-4985-a04d-8739cf9bb7c1" name="Default Changelist" comment="" />
+    <list default="true" id="89d0da4d-3e17-4985-a04d-8739cf9bb7c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/splitwise/hu/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/splitwise/hu/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/splitwise/hu/GroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/splitwise/hu/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/splitwise/hu/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/splitwise.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/hello.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,16 +26,94 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="-102">
+              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#483#484#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/GroupController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/BillController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/Bill.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/Group.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,14 +128,24 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/hello.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/Application.java" />
         <option value="$PROJECT_DIR$/src/test/java/hello/HelloControllerTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/splitwise/hu/group.java" />
+        <option value="$PROJECT_DIR$/src/main/java/splitwise/hu/bill.java" />
+        <option value="$PROJECT_DIR$/src/main/java/splitwise/hu/user.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/hello.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/splitwise/hu/User.java" />
       </list>
     </option>
   </component>
@@ -57,46 +160,63 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="splitwise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="splitwise" type="462c0819:PsiDirectoryNode" />
+              <item name="splitwise-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="splitwise-project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="splitwise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="splitwise" type="462c0819:PsiDirectoryNode" />
+              <item name="splitwise-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="splitwise-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="splitwise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="splitwise" type="462c0819:PsiDirectoryNode" />
+              <item name="splitwise-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="splitwise-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="splitwise" type="b2602c69:ProjectViewProjectNode" />
-              <item name="splitwise" type="462c0819:PsiDirectoryNode" />
+              <item name="splitwise-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="splitwise-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="splitwise-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="splitwise-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551104836631" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551108167681" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -108,7 +228,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Application (1)">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hello.Application" />
       <module name="splitwise" />
@@ -122,8 +242,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="splitwise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hashedin.hu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hashedin.hu.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="splitwise" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hello.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application (1)" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -138,40 +279,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551099017089</updated>
+      <workItem from="1551105456080" duration="2153000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2153000" />
+  </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980047" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Web" side_tool="true" />
+      <window_info id="Learn" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.25379092" />
+      <window_info id="Structure" order="1" sideWeight="0.50242716" side_tool="true" visible="true" weight="0.25379092" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Run Dashboard" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/hello/HelloControllerTest.java">
@@ -191,34 +347,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/hello.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/Bill.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="true" selection-start-column="2" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/hello.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="528">
+          <caret line="32" column="3" selection-start-column="2" selection-end-line="32" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/GroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/splitwise/hu/BillController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
