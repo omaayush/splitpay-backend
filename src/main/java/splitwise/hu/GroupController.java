@@ -1,4 +1,4 @@
-package splitwise.hu;
-
-public class GroupController {
-}
+//package splitwise.hu;
+//
+//public class GroupController {
+//}
