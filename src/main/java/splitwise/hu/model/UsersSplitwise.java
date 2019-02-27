@@ -1,5 +1,9 @@
 package splitwise.hu.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +24,17 @@ public class UsersSplitwise{
 
   private long contactNumber;
 
-  @ManyToMany(mappedBy = "membersOfGroup", fetch = FetchType.EAGER)
+  @ManyToMany(mappedBy = "membersOfGroup")
+  @LazyCollection(LazyCollectionOption.FALSE)
+  @JsonBackReference
   private List<GroupSplitwise> groupsOfUser = new ArrayList<>();
 
   //----------later-------------
-  @OneToMany
+//  @ManyToOne//( mappedBy= "usersInBill", fetch = FetchType.EAGER)
+//  private List<Bill> billsOfUser=new ArrayList<>();
+  @ManyToMany(mappedBy = "usersInBill")
+  @LazyCollection(LazyCollectionOption.FALSE)
+  @JsonBackReference
   private List<Bill> billsOfUser=new ArrayList<>();
 
 
@@ -87,7 +97,14 @@ public class UsersSplitwise{
     this.groupsOfUser = groupsOfUser;
   }
 
-  //  @OneToMany
+  public List<Bill> getBillsOfUser() {
+    return billsOfUser;
+  }
+
+  public void setBillsOfUser(List<Bill> billsOfUser) {
+    this.billsOfUser = billsOfUser;
+  }
+//  @OneToMany
 //  @JoinColumn(name="group_id", nullable=false)
 //  private Set<GroupSplitwise> group;
 

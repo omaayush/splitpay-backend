@@ -51,10 +51,11 @@ public class UserService {
     }
 
     public void updateUserById(long id, UsersSplitwise user) {
-        UsersSplitwise usersSplitwise= userRepository.findById(id).get();
-        usersSplitwise.setUserName(user.getUserName());
-        usersSplitwise.setContactNumber(user.getContactNumber());
-        usersSplitwise.setPassword(user.getPassword());
-        usersSplitwise.setEmailId(user.getEmailId());
+//        UsersSplitwise usersSplitwise= userRepository.findById(id).get();
+//        usersSplitwise.setUserName(user.getUserName());
+//        usersSplitwise.setContactNumber(user.getContactNumber());
+//        usersSplitwise.setPassword(user.getPassword());
+//        usersSplitwise.setEmailId(user.getEmailId());
+        userRepository.save(user);
     }
 }

@@ -28,7 +28,6 @@ public class BillService {
     List<Bill> allBills = new ArrayList<>();
     billRepository.findAll().forEach(allBills::add);
     return allBills;
-//       return user;
   }
 
   public void saveAllBills(List<Bill> allBills) {
@@ -44,14 +43,13 @@ public class BillService {
     billRepository.save(bill);
   }
 
-  public void updateBill(Bill bill) {
-  }
-
   public void deleteBill(long id) {
     billRepository.deleteById(id);
   }
 
 
   public void updateBillById(long id, Bill bill) {
+    billRepository.save(bill);
   }
+
 }
