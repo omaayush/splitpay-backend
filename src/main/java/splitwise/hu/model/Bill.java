@@ -1,60 +1,46 @@
 package splitwise.hu.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
-import java.util.HashMap;
-import java.util.Set;
 
 @Entity
-@Table(name = "Bill")
-public class Bill extends AuditModel{
-
+//@Table(name = "Bill")
+//public class Bill extends AuditModel{
+public class Bill{
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "bill_Id")
-    private Integer id;
+    //@Column(name = "bill_Id")
+    private long billId;
 
-    @Column(name = "purposeOfBill")
+    //@Column(name = "purposeOfBill")
     private String purposeOfBill;
 
-    @Column(name = "amount")
-    private float amount;
+    //@Column(name = "amount")
+    private float billAmount;
 
-    @Column(name = "groupId")
-    private Integer groupId;
+    //@Column(name = "groupId")
+    //private Integer groupId;
 
-    @Column(name = "paidByUserId")
+    //@Column(name = "paidByUserId")
     private Integer paidByUserId;
+
+    @ManyToOne
+    private GroupSplitwise billForGroup;
 
     public Bill() {
     }
 
-    public Bill(Integer id, String purposeOfBill, float amount, Integer groupId, Integer paidByUserId) {
-        this.id = id;
+    public Bill(long billId, String purposeOfBill, float billAmount, Integer paidByUserId) {
+        this.billId = billId;
         this.purposeOfBill = purposeOfBill;
-        this.amount = amount;
-        this.groupId = groupId;
+        this.billAmount = billAmount;
         this.paidByUserId = paidByUserId;
     }
 
-    //    @OneToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id", nullable = false)
-//    @OnDelete(action = OnDeleteAction.CASCADE)
-//    @JsonIgnore
-//    private Set<User> users;
-
-    //private HashMap<Integer,Integer> splitBillsOfAllTheUsers;
-
-
-    public Integer getId() {
-        return id;
+    public long getBillId() {
+        return billId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setBillId(long billId) {
+        this.billId = billId;
     }
 
     public String getPurposeOfBill() {
@@ -65,20 +51,12 @@ public class Bill extends AuditModel{
         this.purposeOfBill = purposeOfBill;
     }
 
-    public float getAmount() {
-        return amount;
+    public float getBillAmount() {
+        return billAmount;
     }
 
-    public void setAmount(float amount) {
-        this.amount = amount;
-    }
-
-    public Integer getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(Integer groupId) {
-        this.groupId = groupId;
+    public void setBillAmount(float billAmount) {
+        this.billAmount = billAmount;
     }
 
     public Integer getPaidByUserId() {
@@ -88,5 +66,22 @@ public class Bill extends AuditModel{
     public void setPaidByUserId(Integer paidByUserId) {
         this.paidByUserId = paidByUserId;
     }
+
+    public GroupSplitwise getBillForGroup() {
+        return billForGroup;
+    }
+
+    public void setBillForGroup(GroupSplitwise billForGroup) {
+        this.billForGroup = billForGroup;
+    }
+
+    //    @OneToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+//    private Set<UsersSplitwise> users;
+
+    //private HashMap<Integer,Integer> splitBillsOfAllTheUsers;
+
 }
 
