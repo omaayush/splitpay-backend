@@ -1,9 +1,10 @@
 package splitwise.hu.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import splitwise.hu.model.UsersSplitwise;
 import splitwise.hu.service.UserService;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +13,20 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    private List<UsersSplitwise> allUsers= new ArrayList<UsersSplitwise>(Arrays.asList(
+            new UsersSplitwise(201, "Aayush", "aayush@oye.com","12345", 123456789),
+            new UsersSplitwise(202, "Aman", "aman@oye.com","12345", 123456789),
+            new UsersSplitwise(203, "Ankesh", "ankesh@oye.com","12345", 123456789),
+            new UsersSplitwise(204, "Divyank", "divyank@oye.com","12345", 123456789),
+            new UsersSplitwise(205, "Deepak", "deepak@oye.com","12345", 123456789)
+    ));
+
+    @RequestMapping(value = "/saveUsers")
+    public String saveAll(){
+        userService.saveAllUsers(allUsers);
+        return "All Users saved";
+    }
 
     @RequestMapping("/users")
     public List<UsersSplitwise> getAllUsers() {

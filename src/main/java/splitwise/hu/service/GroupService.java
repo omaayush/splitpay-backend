@@ -3,6 +3,7 @@ package splitwise.hu.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import splitwise.hu.model.GroupSplitwise;
+import splitwise.hu.model.UsersSplitwise;
 import splitwise.hu.repository.GroupRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,5 +45,10 @@ public class GroupService {
 
     public void deleteGroup(long id) {
         groupRepository.deleteById(id);
+    }
+
+    public void updateGroupById(long id, GroupSplitwise group) {
+        GroupSplitwise groupSplitwise=groupRepository.findById(id).get();
+        groupSplitwise.setGroupName(group.getGroupName());
     }
 }
