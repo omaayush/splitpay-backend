@@ -1,22 +1,20 @@
-package splitwise.hu;
+package splitwise.hu.model;
 
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//
-//public class Bill {
-//  private int id;
-//  private int paidBy;
-//  private HashMap<Integer,Integer> splitBillsOfAllTheUsers;
-//
-//}
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Set;
 
 @Entity
 @Table(name = "Bill")
-public class Bill {
+public class Bill extends AuditModel{
 
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "bill_Id")
     private Integer id;
 
     @Column(name = "purposeOfBill")
@@ -31,6 +29,9 @@ public class Bill {
     @Column(name = "paidByUserId")
     private Integer paidByUserId;
 
+    public Bill() {
+    }
+
     public Bill(Integer id, String purposeOfBill, float amount, Integer groupId, Integer paidByUserId) {
         this.id = id;
         this.purposeOfBill = purposeOfBill;
@@ -38,6 +39,15 @@ public class Bill {
         this.groupId = groupId;
         this.paidByUserId = paidByUserId;
     }
+
+    //    @OneToMany(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+//    private Set<User> users;
+
+    //private HashMap<Integer,Integer> splitBillsOfAllTheUsers;
+
 
     public Integer getId() {
         return id;
