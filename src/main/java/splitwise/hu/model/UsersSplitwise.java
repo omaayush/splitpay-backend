@@ -20,7 +20,7 @@ public class UsersSplitwise{
 
   private long contactNumber;
 
-  @ManyToMany(mappedBy = "membersOfGroup")
+  @ManyToMany(mappedBy = "membersOfGroup", fetch = FetchType.EAGER)
   private List<GroupSplitwise> groupsOfUser = new ArrayList<>();
 
 

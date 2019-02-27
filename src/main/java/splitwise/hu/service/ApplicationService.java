@@ -22,4 +22,11 @@ public class ApplicationService {
         groupService.addGroup(group);
         return "Added "+userId+" to "+groupId;
     }
+
+    public String addBillToGroup(long groupId, long billId) {
+        GroupSplitwise group = groupService.getGroupById(groupId).get();
+        group.setGroupId(groupId);
+        groupService.addGroup(group);
+        return "Added "+billId+" to "+groupId;
+    }
 }

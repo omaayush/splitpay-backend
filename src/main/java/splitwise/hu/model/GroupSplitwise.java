@@ -17,7 +17,7 @@ public class GroupSplitwise
   //@Column(name = "group_name")
   private String groupName;
 
-  @ManyToMany
+  @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();
 
   @OneToMany (mappedBy = "billForGroup")

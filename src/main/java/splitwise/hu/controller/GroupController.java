@@ -2,6 +2,7 @@ package splitwise.hu.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import splitwise.hu.model.GroupSplitwise;
+import splitwise.hu.service.ApplicationService;
 import splitwise.hu.service.GroupService;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,6 +14,9 @@ public class GroupController {
 
     @Autowired
     GroupService groupService;
+
+    @Autowired
+    ApplicationService applicationService;
 
     private List<GroupSplitwise> allGroups=new ArrayList<>(Arrays.asList(
             new GroupSplitwise(101,"Group1"),
@@ -54,4 +58,15 @@ public class GroupController {
     public void deleteUserById(@PathVariable long id) {
         groupService.deleteGroup(id);
     }
+
+    @RequestMapping (value = "/groups/id={id}/addUser/userId={userId}")
+    public String addUserInGroup(@PathVariable("id") long groupId, @PathVariable("userId") long userId){
+        return this.applicationService.addUserToGroup(groupId,userId);
+    }
+
+    @GetMapping (value = "/groups/id={id}/addBill/billId={billId}")
+    public String addBillToGroup(@PathVariable("id") long groupId, @PathVariable("billId") long billId){
+        return this.applicationService.addBillToGroup(groupId, billId);
+    }
+
 }
