@@ -20,7 +20,7 @@ public class GroupSplitwise
   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();
 
-  @OneToMany (mappedBy = "billForGroup")
+  @OneToMany (mappedBy = "billOfGroup")
   private List<Bill> billsInGroup = new ArrayList<>();
 
   public GroupSplitwise() {

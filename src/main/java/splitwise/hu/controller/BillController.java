@@ -18,11 +18,11 @@ public class BillController {
     BillService billService;
 
     private List<Bill> allBills= new ArrayList<Bill>(Arrays.asList(
-            new Bill(1,"Party1", 100, 201),
-            new Bill(2,"Party2", 200, 202),
-            new Bill(3,"Party3", 300, 203),
-            new Bill(4,"Party4", 400, 204),
-            new Bill(5,"Party5", 500, 205)
+            new Bill(301,"Party1", 100, 201),
+            new Bill(302,"Party2", 200, 202),
+            new Bill(303,"Party3", 300, 205),
+            new Bill(304,"Party4", 400, 203)
+            //new Bill(405,"Party5", 500, 205)
     ));
 
 

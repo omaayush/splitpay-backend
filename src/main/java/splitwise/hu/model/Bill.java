@@ -1,5 +1,6 @@
 package splitwise.hu.model;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 //@Table(name = "Bill")
@@ -16,16 +17,33 @@ public class Bill{
     //@Column(name = "amount")
     private float billAmount;
 
-    //@Column(name = "groupId")
-    //private Integer groupId;
-
     //@Column(name = "paidByUserId")
     private Integer paidByUserId;
 
     @ManyToOne
-    private GroupSplitwise billForGroup;
+    private GroupSplitwise billOfGroup;
+
+    //------later
+    @OneToMany
+    private List<UsersSplitwise> usersInBill;
 
     public Bill() {
+    }
+
+    public GroupSplitwise getBillOfGroup() {
+        return billOfGroup;
+    }
+
+    public void setBillOfGroup(GroupSplitwise billOfGroup) {
+        this.billOfGroup = billOfGroup;
+    }
+
+    public List<UsersSplitwise> getUsersInBill() {
+        return usersInBill;
+    }
+
+    public void setUsersInBill(List<UsersSplitwise> usersInBill) {
+        this.usersInBill = usersInBill;
     }
 
     public Bill(long billId, String purposeOfBill, float billAmount, Integer paidByUserId) {

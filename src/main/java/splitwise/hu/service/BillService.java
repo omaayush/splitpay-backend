@@ -44,6 +44,9 @@ public class BillService {
     billRepository.save(bill);
   }
 
+  public void updateBill(Bill bill) {
+  }
+
   public void deleteBill(long id) {
     billRepository.deleteById(id);
   }

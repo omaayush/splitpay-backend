@@ -20,16 +20,49 @@ public class GroupController {
 
     private List<GroupSplitwise> allGroups=new ArrayList<>(Arrays.asList(
             new GroupSplitwise(101,"Group1"),
-            new GroupSplitwise(102,"Group2"),
-            new GroupSplitwise(103,"Group3"),
-            new GroupSplitwise(104,"Group4"),
-            new GroupSplitwise(105,"Group5")
+            new GroupSplitwise(102,"Group2")
+//            new GroupSplitwise(103,"Group3"),
+//            new GroupSplitwise(104,"Group4"),
+//            new GroupSplitwise(105,"Group5")
     ));
 
     @RequestMapping(value = "/saveGroups")
     public String saveAll(){
         groupService.saveAllGroups(allGroups);
         return "All Groups saved";
+    }
+
+    @GetMapping (value = "/saveBillsToGroups")
+    public String addBillsToGroups(){
+        this.applicationService.addBillToGroup( 301,101);
+        this.applicationService.addBillToGroup( 302,101);
+        this.applicationService.addBillToGroup( 303,101);
+        this.applicationService.addBillToGroup( 304,102);
+        return "Bills added to Group";
+    }
+
+    @GetMapping (value = "/saveUsersToGroups")
+    public String addUsersToGroup(){
+        this.applicationService.addUserToGroup( 201,101);
+        this.applicationService.addUserToGroup( 202,101);
+        this.applicationService.addUserToGroup( 203,102);
+        this.applicationService.addUserToGroup( 204,102);
+        this.applicationService.addUserToGroup( 205,101);
+        this.applicationService.addUserToGroup( 205,102);
+        return "Users added to Groups";
+    }
+
+    @GetMapping (value = "/saveUsersToBills")
+    public String addUsersToBill(){
+        this.applicationService.addUserToBill( 201,301);
+        this.applicationService.addUserToBill( 201,302);
+        this.applicationService.addUserToBill( 202,302);
+        this.applicationService.addUserToBill( 201,303);
+        this.applicationService.addUserToBill( 202,303);
+        this.applicationService.addUserToBill( 203,303);
+        this.applicationService.addUserToBill( 203,304);
+        this.applicationService.addUserToBill( 205,304);
+        return "Users added to Groups";
     }
 
     @RequestMapping("/groups")
@@ -60,13 +93,18 @@ public class GroupController {
     }
 
     @RequestMapping (value = "/groups/id={id}/addUser/userId={userId}")
-    public String addUserInGroup(@PathVariable("id") long groupId, @PathVariable("userId") long userId){
-        return this.applicationService.addUserToGroup(groupId,userId);
+    public String addUserInGroup(@PathVariable("id") long userId, @PathVariable("userId") long groupId){
+        return this.applicationService.addUserToGroup(userId,groupId);
     }
 
     @GetMapping (value = "/groups/id={id}/addBill/billId={billId}")
-    public String addBillToGroup(@PathVariable("id") long groupId, @PathVariable("billId") long billId){
-        return this.applicationService.addBillToGroup(groupId, billId);
+    public String addBillToGroup(@PathVariable("id") long billId, @PathVariable("billId") long groupId){
+        return this.applicationService.addBillToGroup(billId,groupId);
+    }
+
+    @RequestMapping (value = "/groups/id={id}/addUser/userId={userId}")
+    public String addUserInBill(@PathVariable("id") long userId, @PathVariable("userId") long billId){
+        return this.applicationService.addUserToBill(userId,billId);
     }
 
 }

@@ -23,6 +23,10 @@ public class UsersSplitwise{
   @ManyToMany(mappedBy = "membersOfGroup", fetch = FetchType.EAGER)
   private List<GroupSplitwise> groupsOfUser = new ArrayList<>();
 
+  //----------later-------------
+  @OneToMany
+  private List<Bill> billsOfUser=new ArrayList<>();
+
 
   public UsersSplitwise() {
   }
