@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "groupId")
+//@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "groupId")
 //@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 //@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE, setterVisibility = JsonAutoDetect.Visibility.NONE)
 //@Table(name = "GroupSplitwise")
@@ -25,13 +25,15 @@ public class GroupSplitwise
   private String groupName;
 
   @ManyToMany(cascade = CascadeType.ALL)
-  @LazyCollection(LazyCollectionOption.FALSE)
-  @JsonIgnoreProperties
+  @JsonIgnore
+  //@LazyCollection(LazyCollectionOption.FALSE)
+  //@JsonIgnoreProperties
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();
 
-  @OneToMany (mappedBy = "billOfGroup")
-  @LazyCollection(LazyCollectionOption.FALSE)
-  @JsonIgnoreProperties
+  @OneToMany (cascade = CascadeType.ALL,mappedBy = "billOfGroup")
+  @JsonIgnore
+  //@LazyCollection(LazyCollectionOption.FALSE)
+  //@JsonIgnoreProperties
   private List<Bill> billsInGroup = new ArrayList<>();
 
   public GroupSplitwise() {

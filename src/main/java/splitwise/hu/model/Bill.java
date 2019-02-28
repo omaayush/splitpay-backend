@@ -4,11 +4,12 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
+import java.util.HashMap;
 import java.util.List;
 
 @Entity
 //--------------working but not showing every name just once------------------------------
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "billId")
+//@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "billId")
 
 //--------------generating its own @id------------------------------------------------
 //@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
@@ -17,6 +18,7 @@ import java.util.List;
 //@Table(name = "Bill")
 //public class Bill extends AuditModel{
 public class Bill{
+
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
     //@Column(name = "bill_Id")
@@ -32,16 +34,29 @@ public class Bill{
     private Integer paidByUserId;
 
     @ManyToOne
-    //@JoinColumn(name="billId")
+    //@JoinColumn(name="billOfGroup")
     private GroupSplitwise billOfGroup;
-
     //------later------------------error1
-//    @OneToMany (mappedBy = "billsOfUser", fetch = FetchType.EAGER)
-//    private List<UsersSplitwise> usersInBill;
+    //    @OneToMany (mappedBy = "billsOfUser", fetch = FetchType.EAGER)
+    //    private List<UsersSplitwise> usersInBill;
+
     @ManyToMany(cascade = CascadeType.ALL)
-    @LazyCollection(LazyCollectionOption.FALSE)
+    @JsonIgnore
+    //@LazyCollection(LazyCollectionOption.FALSE)
     //@JsonIgnoreProperties
     private List<UsersSplitwise> usersInBill;
+
+//    //-----------------balance----------------------
+//    private HashMap<Long,Float> balance=new HashMap<>();
+//
+//    public HashMap<Long, Float> getBalance() {
+//        return balance;
+//    }
+//
+//    public void setBalance(HashMap<Long, Float> balance) {
+//        this.balance = balance;
+//    }
+//    //-----------------balance----------------------
 
     public Bill() {
     }

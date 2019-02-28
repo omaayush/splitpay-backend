@@ -1,6 +1,8 @@
 package splitwise.hu.model;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 //import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "id")
+//@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "id")
 //@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 //@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE, setterVisibility = JsonAutoDetect.Visibility.NONE)
 //@Table(name="UsersSplitwise")
@@ -28,16 +30,18 @@ public class UsersSplitwise{
   private long contactNumber;
 
   @ManyToMany(mappedBy = "membersOfGroup")
-  @LazyCollection(LazyCollectionOption.FALSE)
-//  @JsonIgnoreProperties
+  @JsonIgnore
+  //@LazyCollection(LazyCollectionOption.FALSE)
+  //@JsonIgnoreProperties
   private List<GroupSplitwise> groupsOfUser = new ArrayList<>();
 
   //----------later-------------
 //  @ManyToOne//( mappedBy= "usersInBill", fetch = FetchType.EAGER)
 //  private List<Bill> billsOfUser=new ArrayList<>();
   @ManyToMany(mappedBy = "usersInBill")
-  @LazyCollection(LazyCollectionOption.FALSE)
-//  @JsonIgnoreProperties
+  @JsonIgnore
+  //@LazyCollection(LazyCollectionOption.FALSE)
+  //@JsonIgnoreProperties
   private List<Bill> billsOfUser=new ArrayList<>();
 
 

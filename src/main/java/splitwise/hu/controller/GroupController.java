@@ -59,7 +59,7 @@ public class GroupController {
         this.applicationService.addUserToBill( 202,302);
         this.applicationService.addUserToBill( 201,303);
         this.applicationService.addUserToBill( 202,303);
-        this.applicationService.addUserToBill( 203,303);
+        this.applicationService.addUserToBill( 205,303);
         this.applicationService.addUserToBill( 203,304);
         this.applicationService.addUserToBill( 205,304);
         return "Users added to Bills";
@@ -98,13 +98,33 @@ public class GroupController {
     }
 
     @GetMapping (value = "/groups/id={groupId}/addBill/billId={billId}")
-    public String addBillToGroup(@PathVariable("billId") long billId, @PathVariable("groupId") long groupId){
-        return this.applicationService.addBillToGroup(billId,groupId);
+    public void addBillToGroup(@PathVariable("billId") long billId, @PathVariable("groupId") long groupId){
+        this.applicationService.addBillToGroup(billId,groupId);
     }
 
     @RequestMapping (value = "/bills/id={billId}/addUser/userId={userId}")
     public String addUserToBill(@PathVariable("billId") long billId, @PathVariable("userId") long userId){
         return this.applicationService.addUserToBill(userId,billId);
     }
+
+    @RequestMapping(value="/bills/{id}/balance")
+    public String getBillBalanceString(@PathVariable("id") long id)
+    {
+        return this.applicationService.getBillBalanceString(id);
+    }
+
+    @RequestMapping(value="/groups/{id}/balance")
+    public String getGroupBalance(@PathVariable("id") long id)
+    {
+        return this.applicationService.getGroupBalance(id);
+    }
+
+//    @RequestMapping(value="/users/{id}/balance")
+//    public String getUserBalance(@PathVariable("id") long id)
+//    {
+//        return this.applicationService.getUserBalance(id);
+//    }
+
+
 
 }
