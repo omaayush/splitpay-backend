@@ -54,4 +54,9 @@ public class UserController {
     public void deleteUserById(@PathVariable long id) {
         userService.deleteUser(id);
     }
+
+    @RequestMapping(value = "/users/{id}/balance")
+    public String balanceOfUserById(@PathVariable long id) {
+        return userService.balanceOfUserById(id);
+    }
 }

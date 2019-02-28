@@ -1,5 +1,5 @@
 package splitwise.hu.model;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "groupId")
+//@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
+//@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE, setterVisibility = JsonAutoDetect.Visibility.NONE)
 //@Table(name = "GroupSplitwise")
 //public class GroupSplitwise extends AuditModel
 public class GroupSplitwise
@@ -23,12 +26,12 @@ public class GroupSplitwise
 
   @ManyToMany(cascade = CascadeType.ALL)
   @LazyCollection(LazyCollectionOption.FALSE)
-  @JsonBackReference
+  @JsonIgnoreProperties
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();
 
   @OneToMany (mappedBy = "billOfGroup")
   @LazyCollection(LazyCollectionOption.FALSE)
-  @JsonBackReference
+  @JsonIgnoreProperties
   private List<Bill> billsInGroup = new ArrayList<>();
 
   public GroupSplitwise() {

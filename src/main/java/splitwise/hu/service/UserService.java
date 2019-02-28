@@ -58,4 +58,9 @@ public class UserService {
 //        usersSplitwise.setEmailId(user.getEmailId());
         userRepository.save(user);
     }
+
+    public String balanceOfUserById(long id) {
+        //return userRepository.findById(id).get();
+        return null;
+    }
 }

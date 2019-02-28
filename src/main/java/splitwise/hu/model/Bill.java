@@ -1,5 +1,5 @@
 package splitwise.hu.model;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -7,6 +7,13 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+//--------------working but not showing every name just once------------------------------
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,property = "billId")
+
+//--------------generating its own @id------------------------------------------------
+//@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
+//@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE, setterVisibility = JsonAutoDetect.Visibility.NONE)
+
 //@Table(name = "Bill")
 //public class Bill extends AuditModel{
 public class Bill{
@@ -25,6 +32,7 @@ public class Bill{
     private Integer paidByUserId;
 
     @ManyToOne
+    //@JoinColumn(name="billId")
     private GroupSplitwise billOfGroup;
 
     //------later------------------error1
@@ -32,7 +40,7 @@ public class Bill{
 //    private List<UsersSplitwise> usersInBill;
     @ManyToMany(cascade = CascadeType.ALL)
     @LazyCollection(LazyCollectionOption.FALSE)
-    @JsonBackReference
+    //@JsonIgnoreProperties
     private List<UsersSplitwise> usersInBill;
 
     public Bill() {
