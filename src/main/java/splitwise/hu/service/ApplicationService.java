@@ -31,11 +31,17 @@ public class ApplicationService {
 
     public void addBillToGroup(long billId, long groupId) {
         GroupSplitwise group = groupService.getGroupById(groupId).get();
-        group.getBillsInGroup().add(billService.getBillById(billId).get());
+        Bill bill=billService.getBillById(billId).get();
+        bill.setBillForGroup(group);
+        List<Bill> previousBill=group.getBillsInGroup();
+        previousBill.add(bill);
+        group.setBillsInGroup(previousBill);
+        //group.setBillsInGroup(group.getBillsInGroup().add(billService.getBillById(billId)));
+        //group.getBillsInGroup().add(billService.getBillById(billId).get());
         groupService.addGroup(group);
-        System.out.println("Added BillId = "+billId+" to GroupId = "+groupId);
+        //System.out.println("Added BillId = "+billId+" to GroupId = "+groupId);
         //System.out.println(group.toString());
-        System.out.println(groupService.getGroupById(groupId).get().getBillsInGroup().toString());
+        System.out.println(groupService.getGroupById(groupId).get().getBillsInGroup().size());
 
     }
 

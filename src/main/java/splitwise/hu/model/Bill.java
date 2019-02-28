@@ -33,8 +33,8 @@ public class Bill{
     //@Column(name = "paidByUserId")
     private Integer paidByUserId;
 
-    @ManyToOne
-    //@JoinColumn(name="billOfGroup")
+    @ManyToOne(fetch = FetchType.EAGER)
+    //@JoinColumn(name="Group_Id")
     private GroupSplitwise billOfGroup;
     //------later------------------error1
     //    @OneToMany (mappedBy = "billsOfUser", fetch = FetchType.EAGER)

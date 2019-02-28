@@ -30,7 +30,7 @@ public class GroupSplitwise
   //@JsonIgnoreProperties
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();
 
-  @OneToMany (cascade = CascadeType.ALL,mappedBy = "billOfGroup")
+  @OneToMany (cascade = CascadeType.ALL,mappedBy = "billOfGroup",fetch = FetchType.EAGER)
   @JsonIgnore
   //@LazyCollection(LazyCollectionOption.FALSE)
   //@JsonIgnoreProperties

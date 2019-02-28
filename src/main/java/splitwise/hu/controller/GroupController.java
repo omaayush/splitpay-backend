@@ -38,6 +38,8 @@ public class GroupController {
         this.applicationService.addBillToGroup( 302,101);
         this.applicationService.addBillToGroup( 303,101);
         this.applicationService.addBillToGroup( 304,102);
+        System.out.println(groupService.getGroupById(101).get().getBillsInGroup().size());
+        System.out.println(groupService.getGroupById(102).get().getBillsInGroup().size());
         return "Bills added to Group";
     }
 
