@@ -8,7 +8,9 @@ import splitwise.hu.model.UsersSplitwise;
 
 import javax.sound.midi.Soundbank;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class ApplicationService {
@@ -96,13 +98,36 @@ public class ApplicationService {
     }
 
     public String getUserBalance(long id) {
-        GroupSplitwise group=groupService.getGroupById(id).get();
-        HashMap<UsersSplitwise,Integer> balance=new HashMap<>();
+        //userService.getUserById(id).get().getGroupsOfUser().size()
+        System.out.println("groups where user belong"+
+                userService.getUserById(id).get().getGroupsOfUser().size());
+        System.out.println("bills where user belongs"+
+                userService.getUserById(id).get().getBillsOfUser().size());
         return null;
 
     }
 
     public String getBillBalanceString(long id) {
         return this.getBillBalance(id).toString();
+    }
+
+    public String getFriendsFromUserId(long id) {
+        UsersSplitwise user=userService.getUserById(id).get();
+        HashSet<UsersSplitwise> friends=new HashSet<>();
+        List<GroupSplitwise> allGroups=user.getGroupsOfUser();
+        for(GroupSplitwise group:allGroups)
+        {//List<UsersSplitwise> userss=group.getMembersOfGroup();
+//            for (UsersSplitwise users:userss)
+//                friends.add(users);
+            friends.addAll(group.getMembersOfGroup());
+        }
+        String ret= "<Html> <H1>Friends of user are - </H1> <br><ul>";
+        for(UsersSplitwise use:friends)
+        {
+          ret+="<li>"+use.getUserName()+"</li>";
+        }
+        ret+="</ul> </html>";
+        return ret;
+
     }
 }

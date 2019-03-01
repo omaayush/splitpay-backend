@@ -55,8 +55,4 @@ public class UserController {
         userService.deleteUser(id);
     }
 
-    @RequestMapping(value = "/users/{id}/balance")
-    public String balanceOfUserById(@PathVariable long id) {
-        return userService.balanceOfUserById(id);
-    }
 }
