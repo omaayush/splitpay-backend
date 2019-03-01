@@ -25,7 +25,7 @@ public class GroupSplitwise
   private String groupName;
 
   @ManyToMany(cascade = CascadeType.ALL)
-  @JsonIgnore
+  //@JsonIgnore
   //@LazyCollection(LazyCollectionOption.FALSE)
   //@JsonIgnoreProperties
   private List<UsersSplitwise> membersOfGroup = new ArrayList<UsersSplitwise>();

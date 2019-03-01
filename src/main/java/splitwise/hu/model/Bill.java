@@ -41,7 +41,7 @@ public class Bill{
     //    private List<UsersSplitwise> usersInBill;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JsonIgnore
+    //@JsonIgnore
     //@LazyCollection(LazyCollectionOption.FALSE)
     //@JsonIgnoreProperties
     private List<UsersSplitwise> usersInBill;

@@ -127,8 +127,14 @@ public class GroupController {
         return this.applicationService.getUserBalance(id);
     }
 
+    @RequestMapping(value="/users/{id}/groups")
+    public List getGroupsFromUserId(@PathVariable("id") long id)
+    {
+        return this.applicationService.getGroupsFromUserId(id);
+    }
+
     @RequestMapping(value="users/{id}/friends")
-    public String getFriendsFromUserId(@PathVariable("id") long id)
+    public List getFriendsFromUserId(@PathVariable("id") long id)
     {
         return this.applicationService.getFriendsFromUserId(id);
     }
