@@ -1,7 +1,5 @@
 package splitwise.hu.model;
 import com.fasterxml.jackson.annotation.*;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.*;
 import java.util.ArrayList;

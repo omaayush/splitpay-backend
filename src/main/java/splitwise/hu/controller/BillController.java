@@ -21,7 +21,8 @@ public class BillController {
             new Bill(301,"Party1", 100, 201),
             new Bill(302,"Party2", 200, 202),
             new Bill(303,"Party3", 300, 205),
-            new Bill(304,"Party4", 400, 203)
+            new Bill(304,"Party4", 400, 206),
+            new Bill(305,"Party5", 500, 207)
             //new Bill(405,"Party5", 500, 205)
     ));
 

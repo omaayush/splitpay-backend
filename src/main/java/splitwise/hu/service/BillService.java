@@ -3,7 +3,6 @@ package splitwise.hu.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import splitwise.hu.model.Bill;
-import splitwise.hu.model.UsersSplitwise;
 import splitwise.hu.repository.BillRepository;
 
 import java.util.ArrayList;
